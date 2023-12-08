@@ -1,0 +1,52 @@
+npm stary<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (head content) -->
+    <title>Medicine Registry</title>
+
+    <!-- Add Web3.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
+<!-- Update the JavaScript code to get the current account address -->
+<script>
+  /* To connect using MetaMask */
+  async function connect() {
+    if (window.ethereum) {
+      try {
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        window.web3 = new Web3(window.ethereum);
+       // const account = web3.eth.accounts;
+       const accounts = await web3.eth.getAccounts();
+       const walletAddress = accounts[0]; // Assuming the first account is the selected one
+
+        // Get the current MetaMask selected/active wallet
+       //  const walletAddress = account.givenProvider.selectedAddress;
+
+        // Display wallet address in a div
+        document.getElementById("wallet-address").textContent = `Wallet: ${walletAddress}`;
+      } catch (error) {
+        console.error(error);
+      }
+    } else {
+      console.log("No wallet");
+    }
+  }
+</script>
+
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+
+<!-- Display "Medicine Registry" title at the top -->
+<h1>Medicine Registry</h1>
+
+<!-- Add a button to trigger the MetaMask connection below the title -->
+<input type="button" value="Connect Wallet" id="connect-button" onclick="connect();" />
+
+<!-- Include the content from LoginSignup.jsx below the button -->
+<div id="root"></div>
+<!-- Display wallet address in this div -->
+<div id="wallet-address"></div>
+
+<!-- ... (rest of the body content) -->
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+/*
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 150vh;
+  background: linear-gradient(#021b42, hwb(277 14% 20%));
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(#021b42, hwb(277 14% 20%));
+}
+
+/* Style for the "Connect Wallet" button */
+#connect-button {
+  position: relative;;
+  top: 100px;
+  right: 20px;
+  
+}
+
+  /* Add CSS styles to position the button */
+  /*
+  #connect-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  */
+  #connect-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #3498db; /* Blue background color for the button */
+    color: white; /* Text color for the button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Style for the wallet address display div */
+  #wallet-address {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  h1 {
+    background-color: #7fa6eb; /* Blue background color for the title */
+    color: white; /* Text color for the title */
+    padding: 10px 0; /* Add padding to the title */
+  }
